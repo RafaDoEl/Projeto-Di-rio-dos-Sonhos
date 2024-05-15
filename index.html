@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário dos Sonhos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Diário dos Sonhos</h1>
+        <div class="entry-form">
+            <input type="text" id="dream-title" placeholder="Título do sonho">
+            <textarea id="dream-entry" placeholder="Escreva seus sonhos aqui..."></textarea>
+            <button onclick="addDream()">Adicionar</button>
+        </div>
+        <ul class="dreams-list" id="dreams-list">
+        </ul>
+    </div>
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <h2>Editar Sonho</h2>
+            <textarea id="edit-dream-text" placeholder="Edite seu sonho aqui..."></textarea>
+            <div class="button-container">
+                <button onclick="saveEditedDream()">Salvar</button>
+                <button onclick="closeEditModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDeleteModal()">&times;</span>
+            <h2>Excluir Sonho</h2>
+            <p>Tem certeza de que deseja excluir este sonho?</p>
+            <div class="button-container">
+                <button onclick="confirmDeleteDream()">Confirmar</button>
+                <button onclick="closeDeleteModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
